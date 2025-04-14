@@ -3,112 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flag Football - Minha Página</title>
+    <title>Flag Football - Página Alternativa</title>
     <style>
+        /* Variáveis de cores */
         :root {
-            --primary-color: #001f3f;
-            --secondary-color: #004080;
-            --text-color: #fff;
+            --primary-color: #4CAF50;
+            --secondary-color: #333;
+            --accent-color: #FF5722;
+            --background-color: #f0f0f0;
+            --text-color: #ffffff;
+            --card-bg: #ffffff;
+            --hover-color: #388E3C;
+        }
+
+        /* Reset e estilo básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background-color: var(--background-color);
+            color: var(--secondary-color);
         }
 
         header {
             background-color: var(--primary-color);
-            padding: 20px;
+            color: var(--text-color);
             text-align: center;
+            padding: 30px 0;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: var(--text-color);
+            font-size: 3em;
         }
 
         nav {
+            display: flex;
+            justify-content: center;
             background-color: var(--secondary-color);
-            text-align: center;
-            padding: 10px;
+            padding: 10px 0;
         }
 
         nav a {
             color: var(--text-color);
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
 
-        nav a:hover,
-        nav a:focus {
-            text-decoration: underline;
+        nav a:hover {
+            color: var(--accent-color);
         }
 
         main {
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
         }
 
         section {
-            margin-bottom: 40px;
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-10px);
         }
 
         h2 {
-            border-bottom: 2px solid var(--text-color);
-            padding-bottom: 5px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        p, ul {
+            line-height: 1.6;
         }
 
         footer {
             background-color: var(--primary-color);
-            text-align: center;
-            padding: 10px;
-            font-size: 0.9em;
             color: var(--text-color);
+            text-align: center;
+            padding: 15px 0;
+            font-size: 0.9em;
         }
 
-        /* Estilos para o formulário */
+        /* Estilo de formulário */
         form {
             display: flex;
             flex-direction: column;
-            max-width: 400px;
-            margin: auto;
+            gap: 15px;
         }
 
         label {
-            margin-bottom: 5px;
             font-weight: bold;
+            color: var(--secondary-color);
         }
 
         input, textarea {
-            margin-bottom: 15px;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #ddd;
             border-radius: 4px;
+            font-size: 1em;
         }
 
         button {
-            padding: 10px;
-            background-color: var(--secondary-color);
+            padding: 12px;
+            background-color: var(--primary-color);
             color: var(--text-color);
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
         }
 
         button:hover {
-            background-color: #003366;
+            background-color: var(--hover-color);
         }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Bem-vindo ao Flag Football!</h1>
+    <h1>Flag Football Brasil</h1>
 </header>
 
 <nav>
@@ -121,24 +157,23 @@
 <main>
     <section id="sobre">
         <h2>Sobre o Flag Football</h2>
-        <p>Flag Football é uma variação do futebol americano, onde, em vez de tackle, os jogadores precisam tirar a bandeira (flag) do adversário para derrubá-lo. Ele é um esporte dinâmico e acessível, ideal para todas as idades e habilidades.</p>
-        <p>Ao contrário do futebol americano tradicional, o Flag Football tem uma ênfase maior na agilidade e na estratégia, sendo uma excelente opção para quem busca diversão, competição e trabalho em equipe, sem o impacto físico dos tackles.</p>
+        <p>Flag Football é uma variação do futebol americano, onde, em vez de tackles, os jogadores precisam remover as bandeiras do adversário. Ele é perfeito para quem busca uma opção divertida, estratégica e sem os impactos físicos do futebol americano tradicional.</p>
+        <p>Com ênfase em agilidade e trabalho em equipe, o Flag Football é ideal para todas as idades e habilidades, tornando-se uma excelente opção para competição e lazer.</p>
     </section>
 
     <section id="servicos">
         <h2>Nossos Serviços</h2>
-        <p>Oferecemos os seguintes serviços relacionados ao Flag Football:</p>
         <ul>
-            <li>Treinamentos e clinics para iniciantes e avançados</li>
-            <li>Organização de torneios e campeonatos</li>
-            <li>Aulas de técnica e tática de Flag Football</li>
-            <li>Equipamentos e acessórios para Flag Football</li>
+            <li>Treinamentos personalizados para iniciantes e avançados</li>
+            <li>Organização de torneios e eventos de Flag Football</li>
+            <li>Aulas de técnicas avançadas e estratégias de jogo</li>
+            <li>Venda de equipamentos e acessórios especializados</li>
         </ul>
     </section>
 
     <section id="cadastro-times">
         <h2>Cadastro de Times</h2>
-        <p>Gostaria de cadastrar seu time para participar dos nossos torneios ou treinos? Preencha o formulário abaixo!</p>
+        <p>Quer cadastrar seu time para nossos eventos ou treinos? Preencha a ficha abaixo:</p>
         <form action="#" method="post">
             <label for="nome-time">Nome do Time:</label>
             <input type="text" id="nome-time" name="nome-time" required>
@@ -147,7 +182,7 @@
             <input type="number" id="num-jogadores" name="num-jogadores" min="1" max="12" required>
 
             <label for="descricao">Descrição do Time:</label>
-            <textarea id="descricao" name="descricao" rows="4" placeholder="Escreva algo sobre seu time!" required></textarea>
+            <textarea id="descricao" name="descricao" rows="4" required></textarea>
 
             <button type="submit">Cadastrar Time</button>
         </form>
@@ -155,8 +190,7 @@
 
     <section id="contato">
         <h2>Contato</h2>
-        <p>Para mais informações ou para se inscrever em nossos treinamentos, entre em contato conosco:</p>
-        <p>Envie um e-mail para: <strong>contato@flagfootball.com</strong></p>
+        <p>Ficou interessado? Entre em contato conosco para mais informações!</p>
         <form action="#" method="post">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
@@ -167,7 +201,7 @@
             <label for="mensagem">Mensagem:</label>
             <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
 
-            <button type="submit">Enviar</button>
+            <button type="submit">Enviar Mensagem</button>
         </form>
     </section>
 </main>
@@ -175,6 +209,5 @@
 <footer>
     <p>&copy; 2023 Flag Football Brasil. Todos os direitos reservados.</p>
 </footer>
-
 </body>
 </html>
